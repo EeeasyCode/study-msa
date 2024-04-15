@@ -1,5 +1,5 @@
 import { NestFactory } from '@nestjs/core';
-import { MicroserviceOptions, Transport } from '@nestjs/microservices';
+import { Transport } from '@nestjs/microservices';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
@@ -7,12 +7,12 @@ async function bootstrap() {
   app.connectMicroservice({
     transport: Transport.TCP,
     options: {
-      port: 3003,
+      port: 8082,
       host: 'localhost',
     },
   });
   await app.startAllMicroservices();
-  await app.listen(3003);
+  await app.listen(8082);
   console.log(`Payments Server is running on`);
 }
 bootstrap();
