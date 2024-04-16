@@ -16,7 +16,7 @@ export class EurekaService implements OnModuleInit {
           $: 8082,
           '@enabled': 'true',
         },
-        vipAddress: 'nestjs-service',
+        vipAddress: 'payment-service',
         statusPageUrl: 'http://localhost:8082/info',
         healthCheckUrl: 'http://localhost:8082/health',
         dataCenterInfo: {
