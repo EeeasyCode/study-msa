@@ -6,7 +6,7 @@ import { ResMessage } from './common/constant/res.message';
 import { ResStatusCode } from './common/constant/res.status.code';
 import { TransformInterceptor } from './common/interceptor/transform.interceptor';
 
-@UseInterceptors(TransformInterceptor)
+// @UseInterceptors(TransformInterceptor)
 @Controller()
 export class AppController {
   constructor(private readonly appService: AppService) {}

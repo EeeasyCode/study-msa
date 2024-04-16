@@ -35,7 +35,7 @@ export class EurekaService implements OnModuleInit {
 
   onModuleInit() {
     this.client.start((error) => {
-      console.log('Eureka registration complete', error);
+      console.log('Eureka registration complete');
     });
   }
 }
