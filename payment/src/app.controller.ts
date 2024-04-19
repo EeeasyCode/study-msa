@@ -16,6 +16,11 @@ export class AppController {
     return this.appService.getHello();
   }
 
+  @Get('test')
+  getTest(): string {
+    return '테스트다 이놈아 ';
+  }
+
   @SetResponse(ResMessage.PAYMENT_HELLO, ResStatusCode.OK)
   @MessagePattern('getPaymentHello')
   getApiHello(data: { hi: string }): string {
