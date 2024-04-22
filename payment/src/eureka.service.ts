@@ -35,7 +35,13 @@ export class EurekaService implements OnModuleInit {
 
   onModuleInit() {
     this.client.start((error) => {
-      console.log('Eureka registration complete');
+      if (error) console.error('Eureka client failed to start', error);
     });
+  }
+
+  async getServiceUrl(appName: string): Promise<string> {
+    await this.client.waitForRegistryFetch();
+    const instance = this.client.getInstancesByAppId(appName)[0];
+    return `http://${instance.ipAddr}:${instance.port['$']}`;
   }
 }

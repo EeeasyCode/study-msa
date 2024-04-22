@@ -4,7 +4,7 @@ import { AppService } from './app.service';
 import { SetResponse } from './common/decorator/response.decorator';
 import { ResMessage } from './common/constant/res.message';
 import { ResStatusCode } from './common/constant/res.status.code';
-import { TransformInterceptor } from './common/interceptor/transform.interceptor';
+// import { TransformInterceptor } from './common/interceptor/transform.interceptor';
 
 // @UseInterceptors(TransformInterceptor)
 @Controller()
